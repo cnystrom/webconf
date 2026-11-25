@@ -93,7 +93,7 @@ print "</BODY>\n";
 print "<HR>\n";
 print "<ADDRESS>\n";
 print "For more information contact: \n";
-print "<A HREF=\"mailto:webmaster@cfi.org\">webmaster@cfi.org</A>";
+print "<A HREF=\"mailto:webmaster@example.com\">webmaster@example.com</A>";
 print "</ADDRESS>\n";
 print "</HTML>\n";
 

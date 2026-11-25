@@ -30,7 +30,7 @@ I have in my aliases files for a newsgroup called austin-jesus:
 #
 #  austin-jesus
 #
-owner-austin-jesus: admin@cfi.org
+owner-austin-jesus: admin@example.com
 austin-jesus: "| /usr/local/majordomo/wrapper resend -l austin-jesus -h cfi.org
 -r austin-jesus austin-jesus-outgoing"
 austin-jesus-approval: owner-austin-jesus
@@ -54,7 +54,7 @@ type newsgroup I do this for a group called Padres:
 #
 #  padres
 #
-owner-padres: ccn@cfi.org
+owner-padres:
 padres: "| /usr/local/majordomo/wrapper resend -l padres -h cfi.org -r padres pa
 dres-outgoing"
 padres-approval: owner-padres
@@ -87,8 +87,6 @@ Contact Author at:
  
  *
  *    Chris Nystrom
- *
- *    E-Mail: chris@gnu.ai.mit.edu, nystrom@cactus.org, or ccn@cfi.org
  *
  
 My web page:

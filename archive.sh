@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 #  archive.sh
-#  Chris Nystrom (chris@gnu.ai.mit.edu) Oct 1996
+#  Chris Nystrom Oct 1996
 #
 
 PROGNAME=$1
