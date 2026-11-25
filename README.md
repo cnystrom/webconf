@@ -15,6 +15,7 @@ The download on that page was the shell archive `webconf.01`.
 
 https://nystrom.family/chris/old/programs.html
 https://nystrom.family/chris/old/webconf.01
+All of Chris's code: https://nystrom.family/chris/code/
 
 `archive.sh` is dated Oct 1996.
 
