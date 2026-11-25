@@ -1,0 +1,12 @@
+*.o
+*.a
+*.so
+*.exe
+core
+*.tar
+*.tar.gz
+*.ogg
+*.wav
+*.au
+*.bak
+*~

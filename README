@@ -1,0 +1,97 @@
+
+Web Conference
+--------------
+
+This collection of scripts creates a conferencing system for the web,
+by creating an interface to Usenet news, or simulating a news system
+if none exists.
+
+Contents:
+
+archive.sh    - An archive script I use
+conference.pl - Creates a confernece index
+mail2conf.pl  - Pipes mail to a numbered list of messages in a directory.
+                Use this if you do not have a news system.
+mail2news.sh  - Pipes e-mail into a newsgroup (not original with me)
+message.pl    - PERL script to display a conference message.
+
+Set-Up
+------
+
+This system requires a standard Unix setup (sendmail and INN), but you can
+do without the INN if you need to. The main thing is how you set up your
+sendmail aliases file to gateway mail into a news spool, or a newspool
+equivalent. I also have majordomo running on all my conferences so
+that some can get it via e-mail.
+
+For a confernece that is based on news running here is an example of what
+I have in my aliases files for a newsgroup called austin-jesus:
+
+#
+#  austin-jesus
+#
+owner-austin-jesus: admin@cfi.org
+austin-jesus: "| /usr/local/majordomo/wrapper resend -l austin-jesus -h cfi.org
+-r austin-jesus austin-jesus-outgoing"
+austin-jesus-approval: owner-austin-jesus
+austin-jesus-outgoing: :include:/usr/local/majordomo/lists/austin-jesus,usenet-a
+ustin-jesus,austin-jesus-archive, "| /usr/local/majordomo/wrapper digest -r -C -
+l austin-jesus-digest austin-jesus-digest-outgoing"
+owner-austin-jesus-outgoing: owner-austin-jesus
+austin-jesus-request: "| /usr/local/majordomo/wrapper majordomo -l austin-jesus"
+owner-austin-jesus-request: owner-austin-jesus
+austin-jesus-archive: "| /usr/local/majordomo/wrapper archive \
+ -f /d1/ftp/pub/ccn/austin-jesus -m -a"
+owner-austin-jesus-archive: owner-austin-jesus
+usenet-austin-jesus: "| /usr/local/mail2news/mail2news -n austin.jesus"
+ 
+The key is the usenet-austin-jesus line the gateways the mail into Usenet
+news.
+
+For a machine without INN running, or a conference not based on a Usenet
+type newsgroup I do this for a group called Padres:
+
+#
+#  padres
+#
+owner-padres: ccn@cfi.org
+padres: "| /usr/local/majordomo/wrapper resend -l padres -h cfi.org -r padres pa
+dres-outgoing"
+padres-approval: owner-padres
+padres-outgoing: :include:/usr/local/majordomo/lists/padres,padres-archive,padre
+s-conf
+owner-padres-outgoing: owner-padres
+padres-request: "| /usr/local/majordomo/wrapper majordomo -l padres"
+owner-padres-request: owner-padres
+padres-archive: "| /usr/local/majordomo/wrapper archive \
+ -f /d1/ftp/pub/ccn/padres -m -a"
+owner-padres-archive: owner-padres
+padres-conf: "| /d3/httpd/cfi_local/forums/mail2conf.pl padres"
+
+The key is the last line. You will need to change the path to what
+you have.
+
+Once you have the gateways set up to access a newsgroup you will need to
+do some editing of the perl scripts to your paths, and to taste.
+
+To actually use the conference, say for example the Padres newsgroup just
+type:
+
+  http://www.cfi.org/cgi-bin/confernece.pl?padres
+
+Unless it is a secret group, you may want to include this as a link somewhere.
+
+See my home page for a examples of these groups in action.
+
+Contact Author at:
+ 
+ *
+ *    Chris Nystrom
+ *
+ *    E-Mail: chris@gnu.ai.mit.edu, nystrom@cactus.org, or ccn@cfi.org
+ *
+ 
+My web page:
+ 
+ *    http://www.cfi.org/ccn
+ 
