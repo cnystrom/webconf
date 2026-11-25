@@ -23,6 +23,8 @@ All of Chris's code: https://nystrom.family/chris/code/
 
 No license stated in the original.
 
+This work is dedicated to the public domain under the Unlicense; see LICENSE.
+
 ## Third-party file removed
 
 `mail2news.sh` was in the original archive. Chris's own README says it
