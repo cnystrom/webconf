@@ -10,17 +10,11 @@ if none exists.
 
 ## Origin
 
-From Chris Nystrom's old programs page on cactus.org
-(`http://www.cactus.org/~nystrom/programs.html`). The download on that page
-was the shell archive `webconf.01`.
+From Chris Nystrom's old programs page (originally on cactus.org).
+The download on that page was the shell archive `webconf.01`.
 
-Programs page capture:
-
-https://web.archive.org/web/20090106010843/http://outserv.cactus.org/~nystrom/programs.html
-
-File capture used (8 Nov 1997; later recaptures were byte-identical):
-
-https://web.archive.org/web/19971108102523id_/http://www.cactus.org/~nystrom/webconf.01
+https://nystrom.family/chris/old/programs.html
+https://nystrom.family/chris/old/webconf.01
 
 `archive.sh` is dated Oct 1996.
 
