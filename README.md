@@ -1,3 +1,13 @@
+# Archived (2026)
+
+This is Chris Nystrom's 1996 web conference software, kept as history
+and no longer maintained.
+
+**Do not run this on a live server.** `message.pl` lines 75-76 opens a
+file named in the web address, so a visitor can read files or run
+commands. `conference.pl` line 49 has a syntax error (`push(HEADERS`
+should be `push(@HEADERS`), so it will not run as is.
+
 # WebConf
 
 Web Conference is a collection of Bourne and Perl scripts that act as a
